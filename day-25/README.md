@@ -13,6 +13,7 @@ Dataset: [2018 Central Park Squirrel Census](https://data.cityofnewyork.us/Envir
 
 ## How to run
 ```bash
-python squirrel_count.py
+python main.py
 ```
+
 The result is saved as `squirrel_summary.csv`.
