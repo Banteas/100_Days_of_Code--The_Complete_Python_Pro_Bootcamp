@@ -8,7 +8,7 @@ For example, `MARCO` becomes: `['Mike', 'Alfa', 'Romeo', 'Charlie', 'Oscar']`.
 ## 📂 How it works
 - Reads the NATO alphabet data from `nato_phonetic_alphabet.csv` using **pandas**.  
 - Creates a dictionary mapping each letter to its phonetic code.  
-- Takes a user’s input and translates each letter.  
+- Uses a `while True` loop with error handling (`try/except`) to keep asking until the user enters valid input.  
 
 ---
 
@@ -30,8 +30,16 @@ For example, `MARCO` becomes: `['Mike', 'Alfa', 'Romeo', 'Charlie', 'Oscar']`.
     Enter a name: Marco
     ['Mike', 'Alfa', 'Romeo', 'Charlie', 'Oscar']
 
+If you enter an invalid character (like a number or symbol):
+    
+    Enter a name: M4RCO
+    ❌ Invalid input. Please enter only alphabet letters.
+Then it will ask again until valid input is entered.
+
+
 ## ✨ Notes
 
 - Only works with letters (A–Z).
 
-- Simple beginner project to practice pandas, dict comprehension, and list comprehension.
+- Great for practicing **pandas**, **dictionary comprehension**, **list comprehension**, and **error handling** with `try`/`except`.
+- Simple and beginner-friendly project.
