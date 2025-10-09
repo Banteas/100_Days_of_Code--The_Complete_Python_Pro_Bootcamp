@@ -1,7 +1,7 @@
 # 🔐 Password Manager (Tkinter)
 
 A simple and user-friendly **Password Manager** built with Python and Tkinter.
-This app allows you to generate secure random passwords, copy them automatically to your clipboard, and save your credentials locally for easy access.
+This app allows you to generate secure random passwords, copy them automatically to your clipboard, and save or search your credentials locally using a JSON file.
 
 ---
 
@@ -13,32 +13,39 @@ This app allows you to generate secure random passwords, copy them automatically
 * **Clipboard Copy**
   Each generated password is automatically copied to your clipboard for quick use.
 
-* **Credential Storage**
-  Saves website, email, and password entries in a local `password.txt` file.
+* **Credential Storage (JSON)**  
+  Saves website, email, and password entries in a local `passwords.json` file.  
+  Automatically creates the file if it doesn’t exist.
 
-* **Input Validation**
-  Alerts you if required fields (website or password) are missing.
+* **Search Function**  
+  Instantly retrieves your saved credentials by website name.
+
+* **Input Validation & Error Handling**
+  Alerts you if required fields are missing, if the file doesn’t exist, or if a website isn’t found.
+
 
 * **Simple GUI**
-  Built using Tkinter, with a clean and minimal interface.
+  Clean and intuitive interface built using Tkinter.
 
 ---
 
 ## 🧩 How It Works
 
-1. Enter the **website** name and your **email/username**.
-2. Click **Generate Password** to create a secure password.
-3. The password will appear in the entry box and be copied to your clipboard automatically.
-4. Click **Add** to save your credentials to `password.txt`.
+1. Enter the **website** name and your **email/username**.  
+2. Click **Generate Password** to create a strong random password.  
+3. The password will appear in the field and be automatically copied to your clipboard.  
+4. Click **Add** to save your credentials securely in `passwords.json`.  
+5. Use **Search** to quickly retrieve stored credentials for a website.
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Python 3.x
-* Tkinter (GUI framework)
-* `random` module (for password generation)
-* `pyperclip` (for clipboard functionality)
+* Python 3.x  
+* Tkinter (for GUI)  
+* `random` (for password generation)  
+* `pyperclip` (for clipboard functionality)  
+* `json` (for structured local data storage)
 
 ---
 
@@ -46,20 +53,21 @@ This app allows you to generate secure random passwords, copy them automatically
 
 ```
 password-manager/
-├── logo.png          # App logo displayed in the GUI
-├── password.txt      # Stored credentials file
-├── main.py           # Main program file
-└── README.md         # This file
+├── logo.png # App logo displayed in the GUI
+├── passwords.json # Saved credentials file (auto-created)
+├── main.py # Main program file
+└── README.md # This file
 ```
 
 ---
 
 ## 🧠 Future Improvements
 
-* Add a **search function** to look up saved credentials.
-* Save data in **JSON format** instead of plain text.
-* Implement **password update/delete** features.
-* Add **encryption** for stored data.
+* Add a **delete or edit** feature for credentials  
+* Add a **master password** for encryption and security  
+* Improve UI design using `ttk` for themed widgets  
+* Add a **password strength indicator**  
+* Enable **multiple accounts per website**
 
 ---
 
@@ -70,4 +78,5 @@ Website: github.com
 Email: banteas@hotmail.com
 Password: &gL9$AqF12#n
 ```
+
 
