@@ -22,8 +22,7 @@ A Python project that automatically sends personalized birthday emails to people
     │ ├── letter_1.txt
     │ ├── letter_2.txt
     │ └── letter_3.txt
-    ├── config.py # Stores your email and app password (ignored by Git)
-    └── .gitignore # Contains "config.py" to keep your credentials safe
+    └── .gitignore # Git ignore file
 
 ---
 
@@ -34,7 +33,7 @@ A Python project that automatically sends personalized birthday emails to people
    - Generate a password for this project.  
 
 2. **Add your credentials**  
-   - Open `config.py` and replace with your email and App Password:  
+   - In `main.py`, replace the placeholders with your email and App Password:  
 
 ```python
 SENDER_EMAIL = "your_email@gmail.com"
@@ -42,12 +41,12 @@ EMAIL_PASSWORD = "your_app_password_here"
 ```
 3. Prepare your birthdays CSV
 
-- Example structure:
+   - Example structure:
 
- | name | email                                       | year | month | day |
-        | ---- | ------------------------------------------- | ---- | ----- | --- |
-        | John | [john@example.com](mailto:john@example.com) | 1990 | 10    | 12  |
-        | Jane | [jane@example.com](mailto:jane@example.com) | 1988 | 5     | 4   |
+           | name | email                                       | year | month | day |
+           | ---- | ------------------------------------------- | ---- | ----- | --- |
+           | John | [john@example.com](mailto:john@example.com) | 1990 | 10    | 12  |
+           | Jane | [jane@example.com](mailto:jane@example.com) | 1988 | 5     | 4   |
 
 4. Add letter templates
 
@@ -61,11 +60,6 @@ python main.py
 ````
 The script will check if anyone has a birthday today and send the email automatically.
 
-## 🔐 Security Notes
-
-- Do not upload config.py to GitHub — it’s in .gitignore to keep your credentials safe.
-
-- Always use an App Password, never your main email password.
 
 ## 🚀 Future Improvements
 
